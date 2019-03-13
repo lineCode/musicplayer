@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="1000,660" mininfo="1000,660" maxinfo="1000,660"  caption="0,0,0,60" bktrans="true" roundcorner="1,1">
+		<Font name="微软雅黑" size="12" default="true" />
+		<Font name="微软雅黑" size="14"/>
+		<Font name="微软雅黑" size="11.5"/>	
+		<Font name="微软雅黑" size="20" bold="true"/>
+		<Font name="宋体" size="12"/>
+		<Default name="VScrollBar" value="width=&quot;10&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; bknormalimage=&quot;file='..resxml\skin\list_scroll_thumb_mask.png' source='0,0,10,182'&quot; thumbnormalimage=&quot;file='..resxml\skin\list_scroll_thumb_mask.png' source='0,0,10,182'&quot; thumbhotimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='10,0,20,182'&quot; thumbpushedimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='20,0,30,182'&quot; thumbdisabledimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='30,0,40,182'&quot;"/>
+		<VerticalLayout name="MainVer" width="1000" height="660" bkimage="file='.\resxml\skin\bkimage.png'" >
+		<!--标题栏-->
+			<HorizontalLayout name="CapHor" height="50">
+			<Label name="MainLabel" width="99" height="21" bkimage="file='.\resxml\skin\logo_big.png'"/>
+			<Button name="BackBtn" float="true" pos="215,15,251,41"  tooltip="后退" normalimage="file='.\resxml\skin\btn_backward.png'"/>
+			<Button name="FowardBtn" float="true" pos="255,15,291,41" tooltip="前进" normalimage="file='.\resxml\skin\btn_forward.png'"/>
+			<!--搜索框-->
+			<HorizontalLayout float="true" pos="292,15,503,41" bkimage="file='.\resxml\skin\btn_search_frame.png' source='0,0,211,26'">
+			<HorizontalLayout>
+				<Edit name="SearchEdt" width="153" padding="5,2,2,2" text="本地、在线都能搜哦" textcolor="#FF6B6B6B" texpadding="0,0,0,0" bkimage="file='.\resxml\skin\search_edit.png'" />
+				<Button name="CleanTextBtn" float="true" pos="158,2,180,24" tooltip="清除输入文字" normalimage="file='.\resxml\skin\search_clear.png'"/>
+				<Label float="true" pos="180,2,181,24" bkimage="file='.\resxml\skin\search_line.png'"/>
+				<Button name="SearchBtn" float="true" pos="181,2,203,24" tooltip="搜索" normalimage="file='.\resxml\skin\btn_search.png'"/>
+			</HorizontalLayout>	
+			</HorizontalLayout>	
+			<Button name="LogoBtn" float="true" pos="610,15,700,34" tooltip="主菜单" bkimage="file='.\resxml\skin\logo.png'"/>
+			<Label float="true" pos="724,15,725,34" bkimage="file='.\resxml\skin\separator.png'"/>
+			<Button name="MyMessageBtn" float="true" pos="740,5,776,41" tooltip="我的消息" normalimage="file='.\resxml\skin\btn_message_center.png'"/>
+			<Button name="SkinChangeBtn" float="true" pos="777,5,813,41" tooltip="皮肤设置" normalimage="file='.\resxml\skin\skin_change_icon.png'"/>
+			<Button name="MinToolBtn" float="true" pos="814,5,850,41" tooltip="小工具" normalimage="file='.\resxml\skin\btn_tools.png'"/>
+			<Button name="SettingBtn" float="true" pos="851,5,887,41" tooltip="设置" normalimage="file='.\resxml\skin\btn_setting.png'"/>
+			<Button name="MiniBtn" float="true" pos="888,5,925,41" tooltip="迷你模式" normalimage="file='.\resxml\skin\btn_minimode.png'"/>
+			<Button name="MinBtn" float="true" pos="926,5,962,41" tooltip="最小化" normalimage="file='.\resxml\skin\btn_minimize.png'"/>
+			<Button name="CloseBtn" float="true" pos="963,5,999,41" tooltip="关闭" normalimage="file='.\resxml\skin\btn_close.png'"/>
+			</HorizontalLayout>
+		<!--中间部分-->	
+			<HorizontalLayout height="530">
+			<!--左边列表部分-->	
+				<List name="MusicList" width="190" vscrollbar="true">
+					<ListHeader visiable="false">
+					</ListHeader>
+					<HorizontalLayout height="30">
+						<Label text="在线音乐" textpadding="10,0,0,0" textcolor="#FFFEFFFF"/>
+					</HorizontalLayout>
+					<ListContainerElement height="40" padding="0,0,0,0">
+						<Option group="leftlist" name="OnlineMusicOpt" text="音乐库" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\list_type_icon.png' source='0,0,22,22' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'" />	
+					</ListContainerElement>
+					<ListContainerElement height="40" padding="0,0,0,0">
+						<Option group="leftlist" name="ActiveOpt" height="40" text="动态" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\list_type_icon.png' source='22,0,44,22' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'"/>
+					</ListContainerElement>
+					<Label text="我的音乐" height="30" textpadding="10,1,1,1" textcolor="#FFFEFFFF"/>
+					<ListContainerElement height="40" padding="0,0,0,0">
+						<Option group="leftlist" name="TryListnMusicOpt" text="试听列表" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\list_type_icon.png' source='44,0,66,22' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'" />	
+					</ListContainerElement>
+					<ListContainerElement height="40" padding="0,0,0,0">
+						<Option group="leftlist" name="LocOpt" text="本地音乐" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\list_type_icon.png' source='88,0,110,22' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'"/>
+					</ListContainerElement>
+					<ListContainerElement height="40" padding="0,0,0,0">
+						<Option group="leftlist" name="DowLoaOpt" text="歌曲下载" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\list_type_icon.png' source='110,0,132,22' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'"/>
+					</ListContainerElement>
+					<HorizontalLayout height="30">
+					<Button name="CreateMusicListBtn" text="自建歌单" textcolor="#FFFEFFFF" textpadding="10,0,0,0" align="left" height="22" width="100" normalimage="file='.\resxml\skin\open_triangle.png' dest='55,0,77,22'"/>
+					<Button name="CreateMusicListAddBtn" tooltip="新建歌单" height="22" normalimage="file='.\resxml\skin\add_new_list_btn.png' dest='10,0,32,22'"/>
+					</HorizontalLayout>
+					<ListContainerElement height="40" padding="1,1,1,1">
+						<Option group="leftlist" name="MyLiveOpt" text="我喜欢的单曲" align="left" textpadding="46,2,2,2" textcolor="#FFFEFFFF" bkimage="file='.\resxml\skin\songs_collect_icon.png' dest='22,9,44,31'" selectedimage="file='.\resxml\skin\browser_title_bg.png'"/>
+					</ListContainerElement>
+					<VerticalLayout height="80" padding="1,1,1,1">
+						<Button name="LibraryBtn" text="收藏" textcolor="#FFFEFFFF" align="left" textpadding="10,0,0,0" normalimage="file='.\resxml\skin\open_triangle.png' dest='30,0,52,22'"/>
+						<Button name="LoginBtn" text="立即登录,让音乐跟着你走" textcolor="#FFFEFFFF" align="center"/>
+					</VerticalLayout>
+				</List>
+				<HorizontalLayout float="true" pos="0,490,190,530">
+					<Button name="MyDevBtn" text="我的设备    未连接" align="left" textcolor="#FFFEFFFF" textpadding="45,0,0,0" bkimage="file='.\resxml\skin\mini_song_info_bg.png'" normalimage="file='.\resxml\skin\device_icon_small.png' dest='20,10,42,32'"/>
+				</HorizontalLayout>
+			<!--右边内容部分-->		
+				<VerticalLayout bkcolor="#FFFFFFFF">
+					<TabLayout name="MusiListTab" selectedid="0">
+						<!--音乐库-->
+						<HorizontalLayout >
+							<VerticalLayout>
+								<HorizontalLayout height="35">
+									<VerticalLayout width="140" maxwidth="1000"/>
+									<VerticalLayout width="530">
+										<Option name="MusiLibrOpt" group="MusiLib" float="true" pos="0,10,70,32" selected="true" text="推荐" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="MusiRankOpt" group="MusiLib" float="true" pos="70,10,140,32" text="榜单" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="PlyListOpt" group="MusiLib" float="true" pos="140,10,210,32" text="歌单" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="BoarCastStaOpt" group="MusiLib" float="true" pos="210,10,280,32" text="电台" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="SingerOpt" group="MusiLib" float="true" pos="280,10,350,32" text="歌手" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="ClaFicOpt" group="MusiLib" float="true" pos="350,10,420,32" text="分类" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+										<Option name="LiveOpt" group="MusiLib" float="true" pos="420,10,490,32" text="直播" algin="center" textcolor="#FF6D6D6D" algin="center" selectedtextcolor="#FFFFFFFF" normalimage="file='.\resxml\skin\Opt_BackNor.png'" selectedimage="file='.\resxml\skin\Opt_BackCheck.png'"/>
+									</VerticalLayout>
+									<VerticalLayout width="140" maxwidth="1000"/>
+								</HorizontalLayout>
+								<TabLayout name="MusiLibrTab" selectedid="0">
+								<!--推荐-->
+									<VerticalLayout bkcolor="#FFFFFFFF" vscrollbar="true">
+										<HorizontalLayout height="250">
+											<TabLayout name="RecomTab" float="true" pos="22,15,560,215" selectedid="0">
+												<Label width="547" height="203" tooltip="你怎样唱林俊杰" bkimage="file='.\resxml\skin\one.png'"/>
+												<Label width="547" height="203" tooltip="网络剧《学院传说之三生三世桃花源》主题曲《桃花缘记》" bkimage="file='.\resxml\skin\two.png'"/>
+												<Label width="547" height="203" tooltip="厉害了！我的歌第一期" bkimage="file='.\resxml\skin\three.png'"/>									
+											</TabLayout>
+											<Button name="LeftLabBtn" float="true" pos="22,94,64,136" visible="false" normalimage="file='.\resxml\skin\left_label.png'"/>
+											<Button name="RightLabBtn" float="true" pos="518,94,560,136" visible="false" normalimage="file='.\resxml\skin\right_label.png'"/>
+											<Label float="true" pos="570,15,774,215" bkimage="file='.\resxml\skin\do_listen_to.png'"/>
+										</HorizontalLayout>
+										<HorizontalLayout height="200">
+											<VerticalLayout width="538" padding="20,0,0,0">
+													<Label text="首发" height="30" textpadding="6,0,0,0" height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+													<TabLayout name="ShoufaTab" float="true" pos="0,30,540,200" selectedid="0">
+														<HorizontalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="东北味儿" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="贾乃亮" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="复杂人生" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="魏晨" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="我的时代" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="刘诗涵" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="念念" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="By2" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="功夫瑜伽" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="成龙" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+														</HorizontalLayout>
+														<HorizontalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="好酒好肉好朋友" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="阿牛" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="最美的中国" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="玖月奇迹" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="在雨中" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="亭东小伙伴" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="Paris" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="The Chainsmo..." align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="夜猫" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="马赛克乐队" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+														</HorizontalLayout>
+														<HorizontalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="陪你" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="范玮琪" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="新年后" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="GNZ48" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="桃花缘记" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="黄龄" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="剑魂" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="李炜" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+															<VerticalLayout>
+																<Label width="99" height="97" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+																<Button name="Music1" width="99" height="15" text="合我一起唱" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+																<Button name="Music1" width="99" height="15" text="华语群星" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+															</VerticalLayout>
+														</HorizontalLayout>
+													</TabLayout>
+													<Button name="LeftTabBtn" float="true" pos="0,57,44,99" visible="false" normalimage="file='.\resxml\skin\left_label.png'"/>
+													<Button name="RightTabBtn" float="true" pos="496,57,538,99" visible="false" normalimage="file='.\resxml\skin\right_label.png'"/>
+											</VerticalLayout>
+											<VerticalLayout padding="20,0,0,0">
+													<Label text="推荐分类" textpadding="6,0,0,0 " height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+													<Button name="gengduoBtn" float="true" pos="60,0,110,30" text="更多" textcolor="#FF4F9DE3" textpadding="3,0,0,0" hottextcolor="#FF4F9DE3"/>
+													<Button name="hongheBtn" float="true" pos="5,35,95,64" text="红歌" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="105,35,195,64" text="安静" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="5,69,95,98" text="DJ舞曲" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="105,69,195,98" text="欧美" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="5,103,95,132" text="怀旧" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="105,103,195,132" text="儿歌" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="5,137,95,166" text="古典音乐" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+													<Button name="hongheBtn" float="true" pos="105,137,195,166" text="民歌" normalimage="file='.\resxml\skin\song_list_title_btn_bg.png'"/>
+											</VerticalLayout>
+										</HorizontalLayout>
+										<HorizontalLayout height="200">
+											<VerticalLayout padding="20,0,0,0">
+												<Label text="热门榜单" textpadding="6,0,0,0 " height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+												<Button name="HotLisBtn" float="true" pos="60,0,110,30" text="更多" textcolor="#FF4F9DE3" textpadding="3,0,0,0" hottextcolor="#FF4F9DE3"/>
+												<List name="NewMusicLis" float="true" pos="0,30,365,270" itemselectedbkcolor="#FF59B9C6">
+													<ListHeader height="40" bkcolor="#FF59B9C6">
+														<Label text="新歌榜" width="80" textpadding="10" textcolor="#FFFEFFFF" font="3"/>
+														<Button name="NewMusicBtn" float="true" pos="80,9,102,31" normalimage="file='.\resxml\skin\btn_pause.png'"/>
+													</ListHeader>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="1" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="一生为你感动" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="祁隆" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="2" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="就是让你美" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="龙梅子" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="3" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="大叔不卖我香蕉" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="龙梅子,老猫" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+												</List>
+												<List name="HotMusicLis" float="true" pos="393,30,758,270" itemselectedbkcolor="#FFFF5186">
+													<ListHeader height="40" bkcolor="#FFFF5186">
+														<Label text="热歌榜" width="80" textpadding="10" textcolor="#FFFEFFFF" font="3"/>
+														<Button name="HotMusicBtn" float="true" pos="80,9,102,31" normalimage="file='.\resxml\skin\btn_pause.png'"/>
+													</ListHeader>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="1" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="告白气球" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="周杰伦" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="2" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="演员" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="薛之谦" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+													<ListContainerElement height="30" padding="1,1,1,1">
+														<HorizontalLayout>
+															<Label text="3" width="20" textcolor="#FF535353" font="4"/>
+															<Label text="刚好遇见你" width="250" textcolor="#FF535353" font="4"/>
+															<Label text="李玉刚" textcolor="#FF535353" font="4"/>
+														</HorizontalLayout>
+													</ListContainerElement>
+												</List>
+											</VerticalLayout>
+										</HorizontalLayout>
+										<HorizontalLayout height="170">
+											<VerticalLayout padding="20,0,0,0">
+												<Label text="推荐MV" textpadding="6,0,0,0 " height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+												<HorizontalLayout>
+													<VerticalLayout>
+														<Label width="142" height="80" padding="5,5,5,5" bkimage="file='.\resxml\skin\MV.png'"/>
+														<Button name="Music1" width="99" height="15" text="两个朋友" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+														<Button name="Music1" width="99" height="15" text="孙露" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="80" padding="5,5,5,5" bkimage="file='.\resxml\skin\MV.png'"/>
+														<Button name="Music1" width="99" height="15" text="Skin to skin" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+														<Button name="Music1" width="99" height="15" text="鹿晗" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="80" padding="5,5,5,5" bkimage="file='.\resxml\skin\MV.png'"/>
+														<Button name="Music1" width="99" height="15" text="忘却" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+														<Button name="Music1" width="99" height="15" text="宇多田光" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="80" padding="5,5,5,5" bkimage="file='.\resxml\skin\MV.png'"/>
+														<Button name="Music1" width="99" height="15" text="东北味儿" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+														<Button name="Music1" width="99" height="15" text="李小璐/贾乃亮" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="80" padding="5,5,5,5" bkimage="file='.\resxml\skin\MV.png'"/>
+														<Button name="Music1" width="99" height="15" text="功夫瑜伽" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+														<Button name="Music1" width="99" height="15" text="成龙/张一山/杨紫" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+												</HorizontalLayout>
+											</VerticalLayout>
+										</HorizontalLayout>
+										<HorizontalLayout height="230">
+											<VerticalLayout padding="20,0,0,0">
+												<Label text="推荐歌单" textpadding="6,0,0,0 " height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+												<HorizontalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+														<Button name="Music1" width="144" height="30" text="【环球之音】Motown迷情摩城之" endellipsis="true" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+														<Button name="Music1" width="144" height="30" text="跟紧我，这一单清新风你一定要听" endellipsis="true" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+														<Button name="Music1" width="144" height="30" text="请注意！一批超燃电音正向你来袭" endellipsis="true" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+														<Button name="Music1" width="144" height="30" text="【环球之音】黄金时代下的粤语经典" endellipsis="true" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\music_back.png'"/>
+														<Button name="Music1" width="144" height="30" text="话语甜音|你是一颗超甜的草莓糖" endellipsis="true" align="left" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+												</HorizontalLayout>
+											</VerticalLayout>
+										</HorizontalLayout>
+										<HorizontalLayout height="230">
+											<VerticalLayout padding="20,0,0,0">
+												<HorizontalLayout height="30">
+													<Label text="推荐歌手" textpadding="6,0,0,0 " height="30" font="1" bkimage="file='.\resxml\skin\yellow.png' dest='0,0,4,30'"/>
+												</HorizontalLayout>
+												<HorizontalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\geshou.png'"/>
+														<Button name="Music1" width="144" height="15" text="薛之谦" endellipsis="true" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="144" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\geshou.png'"/>
+														<Button name="Music1" width="144" height="15" text="周杰伦" endellipsis="true" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\geshou.png'"/>
+														<Button name="Music1" width="144" height="15" text="邓丽君" endellipsis="true" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\geshou.png'"/>
+														<Button name="Music1" width="144" height="15" text="王菲" endellipsis="true" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+													<VerticalLayout>
+														<Label width="142" height="144" padding="5,5,5,5" bkimage="file='.\resxml\skin\geshou.png'"/>
+														<Button name="Music1" width="144" height="15" text="祁隆" endellipsis="true" padding="1,1,1,1" textcolor="#FF000000" hottextcolor="#FF4F9DE3"/>
+													</VerticalLayout>
+												</HorizontalLayout>
+											</VerticalLayout>
+										</HorizontalLayout>
+									</VerticalLayout>
+								<!--榜单-->
+									<VerticalLayout>
+										<WebBrowser name="FmWeb" homepage="http://fm.baidu.com/" autonavi="true" bordercolor="#FFFFFFFF"/>
+									</VerticalLayout>
+								<!--歌单-->	
+									<VerticalLayout bkimage="file='.\resxml\skin\music_list.png'">
+									
+									
+									</VerticalLayout>
+								<!--电台-->		
+									<VerticalLayout bkimage="file='.\resxml\skin\diantai.png'">
+									
+									
+									</VerticalLayout>
+								<!--歌手-->		
+									<VerticalLayout bkimage="file='.\resxml\skin\geshou_lis.png'">
+									
+									
+									</VerticalLayout >
+								<!--分类-->		
+									<VerticalLayout bkimage="file='.\resxml\skin\fen_lei.png'">
+									
+									
+									</VerticalLayout>
+								<!--直播-->		
+									<VerticalLayout bkimage="file='.\resxml\skin\zhi_bo.png'">
+									
+									
+									</VerticalLayout>
+								</TabLayout>
+							</VerticalLayout>
+						</HorizontalLayout>
+						<!--动态-->	
+						<HorizontalLayout bkimage="file='.\resxml\skin\Active.png'">
+						
+						</HorizontalLayout>
+						<!--试听列表-->	
+						<HorizontalLayout bkimage="file='.\resxml\skin\try_listen_lis.png'">
+						
+						</HorizontalLayout>
+						<!--本地音乐-->	
+						<HorizontalLayout bkcolor="#FFFFFFFF">
+							<VerticalLayout>
+								<HorizontalLayout height="50">
+									<Label width="20" bkimage="file='.\resxml\skin\yellow.png' dest='15,15,20,39'"/>
+									<Label text="本地音乐" width="60" padding="10,10,10,10" textcolor="#FF333335" font="1"/>
+									<Label name="MusTotaLab" width="15"/>
+									<Label width="370"/>
+									<Button name="PlayAllBtn" width="90" text="播放全部" padding="0,15,0,11" normalimage=" file='.\resxml\skin\song_list_play_all.png' "/>
+									<Label width="15"/>
+									<Button name="ImportMusBtn" width="90" text="导入歌曲" padding="0,15,0,11" normalimage="file='.\resxml\skin\import_music_to_list.png'"/>
+									<Label width="15"/>
+									<Button name="MoreOperBtn" width="90" text="更多操作" padding="0,15,0,11" normalimage="file='.\resxml\skin\song_list_more_op.png'"/>
+								</HorizontalLayout>
+								<HorizontalLayout>
+									<List name="LocMusLis" width="780" padding="15,15,20,15" itemtextcolor="#FF6B6B6B" itemselectedtextcolor="#FFFFFFFF" itemlinecolor="#FFF0F2F2" itemfont="4" vscrollbar="true">
+										<ListHeader height="30" >
+											<ListHeaderItem width="40" bordersize="1" bordercolor="#FFDBDBDB"/>
+											<ListHeaderItem width="255" text="歌曲" align="left" textpadding="10,0,0,0" bordersize="1" bordercolor="#FFDBDBDB"/>
+											<ListHeaderItem width="160" text="歌手" align="left" textpadding="10,0,0,0" bordersize="1" bordercolor="#FFDBDBDB"/>
+											<ListHeaderItem bordersize="1" text="专辑" align="left" textpadding="10,0,0,0" bordercolor="#FFDBDBDB"/>
+											<ListHeaderItem bordersize="1" text="时间" align="left" textpadding="10,0,0,0" bordercolor="#FFDBDBDB"/>
+										</ListHeader>
+									</List>
+								</HorizontalLayout>
+							</VerticalLayout>
+						</HorizontalLayout>
+						<!--歌曲下载-->	
+						<HorizontalLayout bkimage="file='.\resxml\skin\download_lis.png'">
+						
+						</HorizontalLayout>
+						<!--我喜欢的单曲-->	
+						<HorizontalLayout>
+						
+						</HorizontalLayout>
+					</TabLayout>	
+				</VerticalLayout>			
+			</HorizontalLayout>
+		<!--底边部分-->		
+			<HorizontalLayout>
+				<VerticalLayout>
+					<HorizontalLayout height="15">
+						<Slider name="MusPlyTimSli"min="0" max="1000" value="0" bkimage="file='.\resxml\skin\SliderBack.png'" foreimage="file='.\resxml\skin\SliderFore.png'" thumbimage="file='.\resxml\skin\play_slider_thumb2.png'" thumbhotimage="file='.\resxml\skin\play_slider_thumb2.png'" thumbpushedimage="file='.\resxml\skin\play_slider_thumb2.png'" thumbsize="15,15"/>
+					</HorizontalLayout>
+					<HorizontalLayout>
+						<VerticalLayout>
+								<Button name="GoSinFirstBtn" float="true" pos="10,5,60,55" tooltip="进入单曲首页" bkimage="file='.\resxml\skin\default_album_logo.png'"/>
+								<Button name="BestMusicBtn" float="true" pos="70,5,200,20" tooltip="百度音乐 听到极致" text="百度音乐 听到极致" align="center" textcolor="#FFFEFFFF" hottextcolor="#FFF1F19B" pushedtextcolor="#FFF1F19B"/>
+						</VerticalLayout>
+
+						<VerticalLayout>
+							<Button name="PlayPrevBtn" float="true" pos="90,5,134,49" tooltip="上一首"  normalimage="file='.\resxml\skin\btn_play_prev.png'"/>
+							<Button name="PlayBtn" float="true" pos="144,5,188,49" tooltip="播放" normalimage="file='.\resxml\skin\btn_pause.png'"/>
+							<Button name="PlayNextBtn" float="true" pos="198,5,242,49" tooltip="下一首" normalimage="file='.\resxml\skin\btn_play_next.png'"/>
+						</VerticalLayout>
+						
+						<VerticalLayout>
+							<Button name="BesQuaSwitchBtn" float="true" pos="0,15,65,40" tooltip="高品质开关" normalimage="file='.\resxml\skin\btn_high_quality.png'"/>
+							<Button name="VoliceBtn" float="true" pos="80,12,110,43" tooltip="音量开关" normalimage="file='.\resxml\skin\btn_volume_mini_open_state.png'"/>
+							<Slider name="VoliceSli" float="true" pos="110,16,180,36" min="0" max="100" value="50" bkimage="file='.\resxml\skin\SliderBack.png'" foreimage="file='.\resxml\skin\SliderFore.png'" thumbimage="file='.\resxml\skin\volume_slider_thumb.png' source='0,0,12,12'" thumbhotimage="file='.\resxml\skin\volume_slider_thumb.png' source='0,0,12,12'" thumbpushedimage="file='.\resxml\skin\volume_slider_thumb.png' source='0,0,12,12'" thumbsize="12,12"/>
+							<Button name="DeskLyricBtn" float="true" pos="195,15,217,37" tooltip="桌面歌词" normalimage="file='.\resxml\skin\btn_lyric.png'"/>
+							<Button name="CycleLisBtn" float="true" pos="232,15,254,37" tooltip="列表循环" normalimage="file='.\resxml\skin\btn_play_mode_circle.png'"/>
+							<Button name="PlayQueueBtn" float="true" pos="269,15,291,37" tooltip="播放队列" normalimage="file='.\resxml\skin\btn_playing_list.png'"/>
+							<Label name="PlyCountLab" float="true" pos="293,20,304,37" font="4" textcolor="#FFFFFFFF"/>
+							<Button name="CurTimBtn" float="true" pos="300,0,330,10" text="00:00" textcolor="#FFFEFFFF"/>
+						</VerticalLayout>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</HorizontalLayout>
+			
+		</VerticalLayout>
+</Window>
+
+

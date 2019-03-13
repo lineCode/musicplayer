@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,70" roundcorner="5,5">
+	<Font name="微软雅黑" size="12" bold="false" default="true"/>
+	<Font name="微软雅黑" size="14" bold="true"/>
+	<Default name="Menu" value="itemtextcolor=&quot;#FF6B6B6B&quot; itemtextpadding=&quot;25,0,15,0&quot; itemhotbkcolor=&quot;#FFEDF1F7&quot; itemselectedbkcolor=&quot;#FFEDF1F7&quot;"/>
+	<!--主界面-->
+	<VerticalLayout width="300" bkcolor="#FFFFFFFF">
+		<!--标题栏-->
+		<HorizontalLayout height="40" bkcolor="#FFEFEFEF">
+			<Option name="BaiduLoginOpt" width="120" text="百度账号登录" textcolor="#FF373737"/>
+			<Option name="TaiheLoginOpt" width="120" text="太和账号登录" textcolor="#FF373737"/>
+			<Button name="CloseBtn" width="32" height="35" padding="27,0,0,7" normalimage="file='.\resxml\skin\login_close.png'"/>
+		</HorizontalLayout>
+		<!--客户区-->
+		<HorizontalLayout>
+			<TabLayout name="LoginPageTab" selectedid="0">
+				<!--百度账号登录页面-->
+				<VerticalLayout>
+					<HorizontalLayout height="30"></HorizontalLayout>
+					<HorizontalLayout height="30">
+						<Edit name="BaiduUserNameEdt" maxchar="30" padding="28,0,28,0" width="244" height="30" text="用户名/邮箱/手机号" normalimage="file='.\resxml\skin\edit_back.png'" hotimage="file='.\resxml\skin\edit_back.png'" focusedimage="file='.\resxml\skin\edit_back.png'" disabledimage="file='.\resxml\skin\edit_back.png'"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="22"></HorizontalLayout>
+					<HorizontalLayout height="30">
+						<Edit name="BaiduUserPassEdt" maxchar="30" float="true" pos="28,0,272,30" text="密码" normalimage="file='.\resxml\skin\edit_back.png'" hotimage="file='.\resxml\skin\edit_back.png'" focusedimage="file='.\resxml\skin\edit_back.png'" disabledimage="file='.\resxml\skin\edit_back.png'"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="40">
+						<CheckBox name="AutoLoginCBo" float="true" pos="28,6,46,26" normalimage="file='.\resxml\skin\checkbox_ck.png'"/>
+						<Button name="ForgetPasBtn" float="true" pos="200,6,272,26" text="忘记密码" textcolor="#FF40A5FF"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="30">
+						<Button name="LoginBtn" text="登录" textcolor="#FFFFFFFF" float="true" pos="28,0,272,30" normalimage="file='.\resxml\skin\account_login.png'"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="40">
+						<Button name="ForgetPasBtn" float="true" pos="200,6,272,26" text="立即注册" textcolor="#FF40A5FF"/>
+					</HorizontalLayout>
+					<HorizontalLayout height="60"></HorizontalLayout>
+					<HorizontalLayout height="1">
+						<Label bkcolor="#FFD0D0D0" float="true" pos="28,0,272,1"/>
+					</HorizontalLayout>
+					<HorizontalLayout>
+						<Label text="合作网站登录" width="100" height="28" textcolor="#FFA9A9A9" padding="28,0,0,0"/>
+						<Button name="QQBtn" width="28" height="28" padding="10,0,0,0" normalimage="file='.\resxml\skin\qq.png'"/>
+						<Button name="RenRenBtn" width="28" height="28" padding="10,0,0,0" normalimage="file='.\resxml\skin\renren.png'"/>
+						<Button name="SinaBtn" width="28" height="28" padding="10,0,0,0" normalimage="file='.\resxml\skin\sina.png'"/>
+					</HorizontalLayout>
+				</VerticalLayout>
+				<!--太和账号登录页面-->
+				<VerticalLayout>
+				
+				</VerticalLayout>
+			</TabLayout>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

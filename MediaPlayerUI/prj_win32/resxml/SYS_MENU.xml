@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Font name="微软雅黑" size="12" bold="false" default="true"/>
+	<Font name="微软雅黑" size="14" bold="true"/>
+	<Default name="Menu" value="itemtextcolor=&quot;#FF6B6B6B&quot; itemtextpadding=&quot;25,0,15,0&quot; itemhotbkcolor=&quot;#FFEDF1F7&quot; itemselectedbkcolor=&quot;#FFEDF1F7&quot;"/>
+	<Menu width="170" bkcolor="#FFFFFFFF">
+		<MenuElement name="SetMenu" text="设置 " width="170" height="32"/>
+		<MenuElement name="Separator" width="170" height="1" bkimage="file='.\resxml\skin\menu-spearator.png'" enabled="false"/>
+		<MenuElement name="MiniMenu" text="迷你模式" width="170" height="32"/>
+		<MenuElement name="ShowLyricMenu" text="显示桌面歌词" width="170" height="32"/>
+		<MenuElement name="FeedbackAndHelpMenu" text="反馈及帮助          " width="170" height="32" bkimage="file='.\resxml\skin\menu_arrow.png' dest='150,11,156,22' ">
+			<MenuElement name="FeedBackMenu" text="意见反馈           " width="170" height="32"/>
+			<MenuElement name="WebSiteMenu" text="官网" width="170" height="32"/>
+			<MenuElement name="AboutMenu" text="关于" width="170" height="32"/>
+		</MenuElement>
+		<MenuElement name="Separator" width="170" height="1" bkimage="file='.\resxml\skin\menu-spearator.png'" enabled="false"/>
+		<MenuElement name="LoginMenu" text="登录" width="170" height="32"/>
+		<MenuElement name="ExitMenu" text="退出程序" width="170" height="32"/>
+	</Menu>
+</Window>

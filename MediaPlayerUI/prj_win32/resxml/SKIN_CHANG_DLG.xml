@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="236,220" maxinfo="236,220" mininfo="236,220" roundcorner="5,5">
+	<Font name="微软雅黑" size="12" bold="false" default="true"/>
+	<Font name="微软雅黑" size="14" bold="true"/>
+	<Default name="Menu" value="itemtextcolor=&quot;#FF6B6B6B&quot; itemtextpadding=&quot;25,0,15,0&quot; itemhotbkcolor=&quot;#FFEDF1F7&quot; itemselectedbkcolor=&quot;#FFEDF1F7&quot;"/>
+	<VerticalLayout name="skinVer" width="236" height="220" bkcolor="#FFFFFFFF">
+		<HorizontalLayout height="36">
+			<Label width="80" text="皮肤设置" font="2" textpadding="16,0,0,0"/>
+			<Button name="CloseBtn" float="true" pos="200,9,217,26" normalimage="file='.\resxml\skin\skin_btn_close_window.png'"/>
+		</HorizontalLayout>
+		<HorizontalLayout>
+			<Option group="SkCh" name="SkinOpt_1" float="true" pos="16,8,54,46" bkimage="file='.\resxml\skin\skin_custom_1.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_2" float="true" pos="70,8,108,46" bkimage="file='.\resxml\skin\skin_custom_2.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_3" float="true" pos="124,8,162,46" bkimage="file='.\resxml\skin\skin_custom_3.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_4" float="true" pos="178,8,216,46" bkimage="file='.\resxml\skin\skin_custom_4.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+		</HorizontalLayout>
+		<HorizontalLayout>
+			<Option group="SkCh" name="SkinOpt_5" float="true" pos="16,8,54,46" bkimage="file='.\resxml\skin\skin_custom_5.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_6" float="true" pos="70,8,108,46" bkimage="file='.\resxml\skin\skin_custom_6.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_7" float="true" pos="124,8,162,46" bkimage="file='.\resxml\skin\skin_custom_7.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_8" float="true" pos="178,8,216,46" bkimage="file='.\resxml\skin\skin_custom_8.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+		</HorizontalLayout>
+		<HorizontalLayout>
+			<Option group="SkCh" name="SkinOpt_9" float="true" pos="16,8,54,46" bkimage="file='.\resxml\skin\skin_custom_9.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_10" float="true" pos="70,8,108,46" bkimage="file='.\resxml\skin\skin_custom_10.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_11" float="true" pos="124,8,162,46" bkimage="file='.\resxml\skin\skin_custom_11.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+			<Option group="SkCh" name="SkinOpt_12" float="true" pos="178,8,216,46" bkimage="file='.\resxml\skin\skin_custom_12.png'" selectedimage="file='.\resxml\skin\skin_check_state.png' dest='7,7,32,32' "/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

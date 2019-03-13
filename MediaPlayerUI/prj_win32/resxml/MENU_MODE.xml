@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Font name="微软雅黑" size="12" bold="false" default="true"/>
+	<Font name="微软雅黑" size="14" bold="true"/>
+	<Default name="Menu" value="itemtextcolor=&quot;#FF6B6B6B&quot; itemtextpadding=&quot;25,0,15,0&quot; itemhotbkcolor=&quot;#FFEDF1F7&quot; itemselectedbkcolor=&quot;#FFEDF1F7&quot;"/>
+	<Menu width="163" bkcolor="#FFFFFFFF" maxheight="500"> </Menu>
+</Window>

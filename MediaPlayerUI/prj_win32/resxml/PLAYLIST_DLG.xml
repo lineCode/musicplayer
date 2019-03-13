@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="360,445" maxinfo="360,445" mininfo="360,445" roundcorner="1,1">
+	<Font name="微软雅黑" size="12" bold="false" default="true"/>
+	<Font name="宋体" size="12" bold="false"/>
+	<Default name="VScrollBar" value="width=&quot;10&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; bknormalimage=&quot;file='..resxml\skin\list_scroll_thumb_mask.png' source='0,0,10,182'&quot; thumbnormalimage=&quot;file='..resxml\skin\list_scroll_thumb_mask.png' source='0,0,10,182'&quot; thumbhotimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='10,0,20,182'&quot; thumbpushedimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='20,0,30,182'&quot; thumbdisabledimage=&quot;file='.\resxml\skin\list_scroll_thumb_mask.png' source='30,0,40,182'&quot;"/>
+	<VerticalLayout name="SkinVer" bkcolor="#FFFFFFFF">
+		<!--标题栏-->
+		<HorizontalLayout height="45" bkcolor="#FF5BA0CF">
+			<Label name="PlaLisTitLab" width="315" text="正在播放-本地列表" font="1" textcolor="#FFFFFFFF" textpadding="15,0,0,0,"/>
+			<Button name="CloseBtn" padding="20,11,2,12" normalimage="file='.\resxml\skin\btn_close_play_list.png'"/>
+		</HorizontalLayout>
+		<!--客户区-->
+		<HorizontalLayout bkcolor="#FFFFFFFF">
+			<List name="PlayLis" itemtextpadding="5,5,5,5" itemtextcolor="#FF6B6B6B" itemselectedtextcolor="#FFFFFFFF" itemlinecolor="#FFF0F2F2" itemfont="1" vscrollbar="true">
+				<ListHeader visible="false">
+					<ListHeaderItem width="40"></ListHeaderItem>
+					<ListHeaderItem width="200"></ListHeaderItem>
+					<ListHeaderItem></ListHeaderItem>
+				</ListHeader>
+			</List>
+		</HorizontalLayout>		
+	</VerticalLayout>
+</Window>
