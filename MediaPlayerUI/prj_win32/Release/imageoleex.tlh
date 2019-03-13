@@ -1,0 +1,246 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (61f9b2ff).
+//
+// f:\备份\mediaplayerui\prj_win32\release\imageoleex.tlh
+//
+// C++ source equivalent of Win32 type library .\\imageoleex.dll
+// compiler-generated file created 04/06/17 at 09:22:19 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ImageOleExLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("421ecd69-1d5f-4da2-a493-26c11a84845d"))
+/* LIBID */ __ImageOleExLib;
+struct __declspec(uuid("9d62ed61-af8b-431e-bcc1-bfa4fd7411ec"))
+/* dispinterface */ _IGifAnimatorEvents;
+struct /* coclass */ GifAnimator;
+struct __declspec(uuid("cfc4c546-4e81-49e6-8b58-21a2488851a9"))
+/* dual interface */ IGifAnimator;
+struct /* coclass */ linkole;
+struct __declspec(uuid("1448511c-b2b5-45df-9402-2acc2fe39e35"))
+/* dual interface */ Ilinkole;
+struct /* coclass */ atcontact;
+struct __declspec(uuid("d06f4406-7b02-4649-87ad-321bae3368c0"))
+/* dual interface */ Iatcontact;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IGifAnimatorEvents, __uuidof(_IGifAnimatorEvents));
+_COM_SMARTPTR_TYPEDEF(IGifAnimator, __uuidof(IGifAnimator));
+_COM_SMARTPTR_TYPEDEF(Ilinkole, __uuidof(Ilinkole));
+_COM_SMARTPTR_TYPEDEF(Iatcontact, __uuidof(Iatcontact));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("9d62ed61-af8b-431e-bcc1-bfa4fd7411ec"))
+_IGifAnimatorEvents : IDispatch
+{};
+
+struct __declspec(uuid("74c5ba12-1684-4c3d-b4d9-5c1a444d49e9"))
+GifAnimator;
+    // [ default ] interface IGifAnimator
+    // [ default, source ] dispinterface _IGifAnimatorEvents
+
+struct __declspec(uuid("cfc4c546-4e81-49e6-8b58-21a2488851a9"))
+IGifAnimator : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT LoadFromFile (
+        _bstr_t file,
+        long bCompress );
+    HRESULT GetFilePath (
+        BSTR * lpfile );
+    HRESULT SetRichEditSite (
+        struct IOleClientSite * lpClientSite );
+    HRESULT ChangeSize ( );
+    HRESULT GetObjectRect (
+        struct tagRECT * lpRect );
+    HRESULT GetScale (
+        long * pScale );
+    HRESULT SetTextServices (
+        IUnknown * pTextServices );
+    HRESULT SetTextHost (
+        IUnknown * pTextHost );
+    HRESULT SetRefreshColor (
+        unsigned long clr );
+    HRESULT SetUserId (
+        long lUserId );
+    HRESULT GetUserId (
+        long * plUserId );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_LoadFromFile (
+        BSTR file,
+        long bCompress ) = 0;
+      virtual HRESULT __stdcall raw_GetFilePath (
+        BSTR * lpfile ) = 0;
+      virtual HRESULT __stdcall raw_SetRichEditSite (
+        struct IOleClientSite * lpClientSite ) = 0;
+      virtual HRESULT __stdcall raw_ChangeSize ( ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectRect (
+        struct tagRECT * lpRect ) = 0;
+      virtual HRESULT __stdcall raw_GetScale (
+        long * pScale ) = 0;
+      virtual HRESULT __stdcall raw_SetTextServices (
+        IUnknown * pTextServices ) = 0;
+      virtual HRESULT __stdcall raw_SetTextHost (
+        IUnknown * pTextHost ) = 0;
+      virtual HRESULT __stdcall raw_SetRefreshColor (
+        unsigned long clr ) = 0;
+      virtual HRESULT __stdcall raw_SetUserId (
+        long lUserId ) = 0;
+      virtual HRESULT __stdcall raw_GetUserId (
+        long * plUserId ) = 0;
+};
+
+struct __declspec(uuid("337f247f-d25d-42cd-bee8-4b40aab6e1b6"))
+linkole;
+    // [ default ] interface Ilinkole
+
+struct __declspec(uuid("1448511c-b2b5-45df-9402-2acc2fe39e35"))
+Ilinkole : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetLinkInfo (
+        _bstr_t name,
+        _bstr_t id,
+        long bSetFont );
+    HRESULT SetRichEditSite (
+        struct IOleClientSite * lpClientSite );
+    HRESULT GetObjectRect (
+        struct tagRECT * lpRect );
+    HRESULT GetName (
+        BSTR * lpName );
+    HRESULT GetId (
+        BSTR * lpId );
+    HRESULT SetTextHost (
+        IUnknown * pTextHost );
+    HRESULT SetRect (
+        long w,
+        long h );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetLinkInfo (
+        BSTR name,
+        BSTR id,
+        long bSetFont ) = 0;
+      virtual HRESULT __stdcall raw_SetRichEditSite (
+        struct IOleClientSite * lpClientSite ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectRect (
+        struct tagRECT * lpRect ) = 0;
+      virtual HRESULT __stdcall raw_GetName (
+        BSTR * lpName ) = 0;
+      virtual HRESULT __stdcall raw_GetId (
+        BSTR * lpId ) = 0;
+      virtual HRESULT __stdcall raw_SetTextHost (
+        IUnknown * pTextHost ) = 0;
+      virtual HRESULT __stdcall raw_SetRect (
+        long w,
+        long h ) = 0;
+};
+
+struct __declspec(uuid("cb7846e2-df72-4608-aa9c-57732ba7a958"))
+atcontact;
+    // [ default ] interface Iatcontact
+
+struct __declspec(uuid("d06f4406-7b02-4649-87ad-321bae3368c0"))
+Iatcontact : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetContactInfo (
+        _bstr_t name,
+        _bstr_t id,
+        long bBeRefered );
+    HRESULT SetRichEditSite (
+        struct IOleClientSite * lpClientSite );
+    HRESULT GetObjectRect (
+        struct tagRECT * lpRect );
+    HRESULT GetId (
+        BSTR * lpId );
+    HRESULT GetName (
+        BSTR * lpName );
+    HRESULT SetRect (
+        long w,
+        long h );
+    HRESULT SetTextHost (
+        IUnknown * pTextHost );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetContactInfo (
+        BSTR name,
+        BSTR id,
+        long bBeRefered ) = 0;
+      virtual HRESULT __stdcall raw_SetRichEditSite (
+        struct IOleClientSite * lpClientSite ) = 0;
+      virtual HRESULT __stdcall raw_GetObjectRect (
+        struct tagRECT * lpRect ) = 0;
+      virtual HRESULT __stdcall raw_GetId (
+        BSTR * lpId ) = 0;
+      virtual HRESULT __stdcall raw_GetName (
+        BSTR * lpName ) = 0;
+      virtual HRESULT __stdcall raw_SetRect (
+        long w,
+        long h ) = 0;
+      virtual HRESULT __stdcall raw_SetTextHost (
+        IUnknown * pTextHost ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_ImageOleExLib =
+    {0x421ecd69,0x1d5f,0x4da2,{0xa4,0x93,0x26,0xc1,0x1a,0x84,0x84,0x5d}};
+extern "C" const GUID __declspec(selectany) DIID__IGifAnimatorEvents =
+    {0x9d62ed61,0xaf8b,0x431e,{0xbc,0xc1,0xbf,0xa4,0xfd,0x74,0x11,0xec}};
+extern "C" const GUID __declspec(selectany) CLSID_GifAnimator =
+    {0x74c5ba12,0x1684,0x4c3d,{0xb4,0xd9,0x5c,0x1a,0x44,0x4d,0x49,0xe9}};
+extern "C" const GUID __declspec(selectany) IID_IGifAnimator =
+    {0xcfc4c546,0x4e81,0x49e6,{0x8b,0x58,0x21,0xa2,0x48,0x88,0x51,0xa9}};
+extern "C" const GUID __declspec(selectany) CLSID_linkole =
+    {0x337f247f,0xd25d,0x42cd,{0xbe,0xe8,0x4b,0x40,0xaa,0xb6,0xe1,0xb6}};
+extern "C" const GUID __declspec(selectany) IID_Ilinkole =
+    {0x1448511c,0xb2b5,0x45df,{0x94,0x02,0x2a,0xcc,0x2f,0xe3,0x9e,0x35}};
+extern "C" const GUID __declspec(selectany) CLSID_atcontact =
+    {0xcb7846e2,0xdf72,0x4608,{0xaa,0x9c,0x57,0x73,0x2b,0xa7,0xa9,0x58}};
+extern "C" const GUID __declspec(selectany) IID_Iatcontact =
+    {0xd06f4406,0x7b02,0x4649,{0x87,0xad,0x32,0x1b,0xae,0x33,0x68,0xc0}};
+
+//
+// Wrapper method implementations
+//
+
+#include "f:\备份\mediaplayerui\prj_win32\release\imageoleex.tli"
+
+} // namespace ImageOleExLib
+
+#pragma pack(pop)

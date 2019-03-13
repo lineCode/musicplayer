@@ -1,0 +1,170 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (61f9b2ff).
+//
+// f:\备份\mediaplayerui\prj_win32\release\imageoleex.tli
+//
+// Wrapper implementations for Win32 type library .\\imageoleex.dll
+// compiler-generated file created 04/06/17 at 09:22:19 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IGifAnimator wrapper method implementations
+//
+
+inline HRESULT IGifAnimator::LoadFromFile ( _bstr_t file, long bCompress ) {
+    HRESULT _hr = raw_LoadFromFile(file, bCompress);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::GetFilePath ( BSTR * lpfile ) {
+    HRESULT _hr = raw_GetFilePath(lpfile);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::SetRichEditSite ( struct IOleClientSite * lpClientSite ) {
+    HRESULT _hr = raw_SetRichEditSite(lpClientSite);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::ChangeSize ( ) {
+    HRESULT _hr = raw_ChangeSize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::GetObjectRect ( struct tagRECT * lpRect ) {
+    HRESULT _hr = raw_GetObjectRect(lpRect);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::GetScale ( long * pScale ) {
+    HRESULT _hr = raw_GetScale(pScale);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::SetTextServices ( IUnknown * pTextServices ) {
+    HRESULT _hr = raw_SetTextServices(pTextServices);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::SetTextHost ( IUnknown * pTextHost ) {
+    HRESULT _hr = raw_SetTextHost(pTextHost);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::SetRefreshColor ( unsigned long clr ) {
+    HRESULT _hr = raw_SetRefreshColor(clr);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::SetUserId ( long lUserId ) {
+    HRESULT _hr = raw_SetUserId(lUserId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGifAnimator::GetUserId ( long * plUserId ) {
+    HRESULT _hr = raw_GetUserId(plUserId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface Ilinkole wrapper method implementations
+//
+
+inline HRESULT Ilinkole::SetLinkInfo ( _bstr_t name, _bstr_t id, long bSetFont ) {
+    HRESULT _hr = raw_SetLinkInfo(name, id, bSetFont);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::SetRichEditSite ( struct IOleClientSite * lpClientSite ) {
+    HRESULT _hr = raw_SetRichEditSite(lpClientSite);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::GetObjectRect ( struct tagRECT * lpRect ) {
+    HRESULT _hr = raw_GetObjectRect(lpRect);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::GetName ( BSTR * lpName ) {
+    HRESULT _hr = raw_GetName(lpName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::GetId ( BSTR * lpId ) {
+    HRESULT _hr = raw_GetId(lpId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::SetTextHost ( IUnknown * pTextHost ) {
+    HRESULT _hr = raw_SetTextHost(pTextHost);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Ilinkole::SetRect ( long w, long h ) {
+    HRESULT _hr = raw_SetRect(w, h);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface Iatcontact wrapper method implementations
+//
+
+inline HRESULT Iatcontact::SetContactInfo ( _bstr_t name, _bstr_t id, long bBeRefered ) {
+    HRESULT _hr = raw_SetContactInfo(name, id, bBeRefered);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::SetRichEditSite ( struct IOleClientSite * lpClientSite ) {
+    HRESULT _hr = raw_SetRichEditSite(lpClientSite);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::GetObjectRect ( struct tagRECT * lpRect ) {
+    HRESULT _hr = raw_GetObjectRect(lpRect);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::GetId ( BSTR * lpId ) {
+    HRESULT _hr = raw_GetId(lpId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::GetName ( BSTR * lpName ) {
+    HRESULT _hr = raw_GetName(lpName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::SetRect ( long w, long h ) {
+    HRESULT _hr = raw_SetRect(w, h);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT Iatcontact::SetTextHost ( IUnknown * pTextHost ) {
+    HRESULT _hr = raw_SetTextHost(pTextHost);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
